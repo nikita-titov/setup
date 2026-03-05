@@ -22,7 +22,7 @@
             background: radial-gradient(ellipse at top, #0f0f0f 0%, #000000 50%, #000000 100%),
                         linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
             min-height: 100vh;
-            padding: 3rem;
+            padding: 2rem;
             color: #ffffff;
             line-height: 1.6;
         }
@@ -68,7 +68,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
 
         .header-card {
@@ -106,7 +106,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
 
         .column {
@@ -427,6 +427,16 @@
             letter-spacing: 0.05em;
         }
 
+        .tv-eco-wrap{
+            max-width: 1600px;
+            margin: 0 auto;
+            margin-top: 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,.08);
+            max-height: 290px;
+        }
+
         /* Responsive */
         @media (max-width: 1400px) {
             .main-grid {
@@ -458,11 +468,11 @@
     <div class="container">
         <div class="header-section">
             <div class="header-card">
-                <div class="header-label">Инструменты</div>
+                <!-- <div class="header-label">Инструменты</div> -->
                 <div class="header-title">DR, FVG, IFVG, RB, Fractals</div>
             </div>
             <div class="header-card">
-                <div class="header-label">Таймфреймы</div>
+                <!-- <div class="header-label">Таймфреймы</div> -->
                 <div class="header-title">M, W, D, H4</div>
             </div>
         </div>
@@ -483,7 +493,6 @@
                         <li>
                         <strong style="color: rgb(255, 215, 0); font-weight: 600;">HTF Filter:</strong>
                          Если был M / W Raid или FVG зона - торгую строго в сторону этого реверса.
-                         <p> <span style="color: rgb(255, 215, 0); font-weight: 600;">HTF контекст всегда в приоритете.</span></li>
                     </ul>
                 </div>
             </div>
@@ -569,6 +578,24 @@
             </div>
         </div>
     </div>
+                
+    <div class="tv-eco-wrap">
+        <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+            {
+            "colorTheme": "dark",
+            "isTransparent": true,
+            "width": "100%",
+            "height": 380,
+            "locale": "en",
+            "importanceFilter": "1",
+            "currencyFilter": "EUR,USD,GBP"
+            }
+        </script>
+        </div>
+    </div>
+
     <script>
         const checkboxes = document.querySelectorAll('.checklist-checkbox');
         const progressBarFill = document.getElementById('progress-bar');
